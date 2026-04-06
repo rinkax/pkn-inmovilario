@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Publicar Portfolio - PNK PREMIUM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body { margin: 0; background: var(--fondo-sitio); }
+        .split-layout { display: flex; min-height: 100vh; }
+        
+        /* Mitad Izquierda: Imagen Fija */
+        .split-image {
+            flex: 1;
+            background: linear-gradient(rgba(19,39,67,0.4), rgba(19,39,67,0.8)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80') center/cover;
+            display: flex; flex-direction: column; justify-content: center; padding: 60px; color: white;
+            position: sticky; top: 0; height: 100vh; box-sizing: border-box;
+        }
+        .split-image h1 { font-size: 40px; color: white; margin-bottom: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .btn-volver { position: absolute; top: 30px; left: 40px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; opacity: 0.8;}
+        .btn-volver:hover { opacity: 1; color: var(--gold); }
+        
+        /* Mitad Derecha: Formulario Deslizable */
+        .split-form {
+            flex: 1.5; padding: 60px 8%; display: flex; flex-direction: column; justify-content: center;
+        }
+        
+        .grid-avanzado { display: grid; grid-template-columns: 1fr 1fr; gap: 0 25px; }
+        .checkbox-container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--texto-gris); cursor: pointer; transition: var(--transition); padding: 8px; border-radius: 4px; border: 1px solid transparent;}
+        .checkbox-item:hover { background: #fbfbfb; border-color: var(--borde-suave); color: var(--navy); }
+        .checkbox-item input { width: auto; margin: 0; cursor: pointer; }
+        
+        .caja-archivo { background: #fbfbfb; padding: 20px; border: 1px dashed var(--borde-suave); border-radius: 8px; text-align: center; transition: var(--transition); }
+        .caja-archivo:hover { border-color: var(--gold); background: white; }
+
+        @keyframes slideInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animado-form { animation: slideInUp 0.8s ease forwards; opacity: 0; }
+        
+        @media (max-width: 900px) {
+            .split-layout { flex-direction: column; }
+            .split-image { height: 35vh; position: relative; padding: 30px; }
+            .split-form { padding: 40px 20px; flex: 1; }
+            .checkbox-container { grid-template-columns: 1fr 1fr; }
+            .grid-avanzado { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split-layout">
+        <div class="split-image animado">
+            <a href="administrador.html" class="btn-volver">← Volver a Consola</a>
+            <span style="color: var(--gold); font-weight: 700; letter-spacing: 3px; font-size: 14px;">MÓDULO DE INVENTARIO</span>
+            <h1>Publicación de Activos Inmobiliarios</h1>
+            <p style="font-weight: 300; opacity: 0.9;">Asegúrese de ingresar toda la información técnica y material multimedia en alta resolución para maximizar el impacto en nuestro catálogo Premium.</p>
+        </div>
+
+        <div class="split-form">
+            <h2 class="animado-form" style="color: var(--navy); font-size: 28px; margin-top: 0; margin-bottom: 5px;">Detalles de la Propiedad</h2>
+            <p class="animado-form" style="color: var(--texto-gris); font-size: 14px; margin-bottom: 40px;">Complete las especificaciones del inmueble para su publicación inmediata.</p>
+
+            <form action="administrador.html" method="POST" enctype="multipart/form-data">
+                
+                <div class="animado-form" style="animation-delay: 0.1s;">
+                    <label>Título de la Publicación</label>
+                    <input type="text" placeholder="Ej: Residencia de lujo en El Milagro con vista al mar" required>
+                </div>
+
+                <div class="animado-form" style="animation-delay: 0.2s;">
+                    <label>Tipo de Propiedad</label>
+                    <select required>
+                        <option value="">Seleccionar clasificación...</option>
+                        <option>Casa</option>
+                        <option>Departamento</option>
+                        <option>Terreno</option>
+                    </select>
+                </div>
+
+                <div class="animado-form" style="animation-delay: 0.3s;">
+                    <label>Descripción Ejecutiva del Inmueble</label>
+                    <textarea rows="4" placeholder="Redacte una descripción enfocada en los puntos fuertes y la plusvalía de la propiedad..." required></textarea>
+                </div>
+
+                <h3 class="animado-form" style="animation-delay: 0.4s; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border-bottom: 1px solid var(--borde-suave); padding-bottom: 10px; margin-top: 40px; color: var(--gold-dark);">Métricas y Valor Comercial</h3>
+                
+                <div class="grid-avanzado animado-form" style="animation-delay: 0.4s;">
+                    <div><label>Dormitorios</label><input type="number" min="0" required></div>
+                    <div><label>Baños</label><input type="number" min="0" required></div>
+                    <div><label>Área Construida (m²)</label><input type="number" min="0" required></div>
+                    <div><label>Área Terreno Total (m²)</label><input type="number" min="0" required></div>
+                    <div><label>Fecha de Publicación</label><input type="date" required></div>
+                    <div><label>Permitir Visitas</label><select required><option>Sí, agendables</option><option>No por el momento</option></select></div>
+                    <div><label>Precio de Venta (UF)</label><input type="number" step="0.01" required></div>
+                    <div><label>Precio de Venta (CLP)</label><input type="number" required></div>
+                </div>
+
+                <h3 class="animado-form" style="animation-delay: 0.5s; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border-bottom: 1px solid var(--borde-suave); padding-bottom: 10px; margin-top: 40px; color: var(--gold-dark);">Aménities y Atributos Adicionales</h3>
+                <div class="checkbox-container animado-form" style="animation-delay: 0.5s;">
+                    <label class="checkbox-item"><input type="checkbox"> Bodega</label>
+                    <label class="checkbox-item"><input type="checkbox"> Estacionamiento</label>
+                    <label class="checkbox-item"><input type="checkbox"> Cocina Amoblada</label>
+                    <label class="checkbox-item"><input type="checkbox"> Antejardín</label>
+                    <label class="checkbox-item"><input type="checkbox"> Piscina</label>
+                    <label class="checkbox-item"><input type="checkbox"> Logia / Lavandería</label>
+                    <label class="checkbox-item"><input type="checkbox"> Patio Trasero</label>
+                </div>
+
+                <h3 class="animado-form" style="animation-delay: 0.6s; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border-bottom: 1px solid var(--borde-suave); padding-bottom: 10px; margin-top: 40px; color: var(--gold-dark);">Material Multimedia y Geoposición</h3>
+                
+                <div class="animado-form" style="animation-delay: 0.6s;">
+                    <label>Enlace de Google Maps (Iframe)</label>
+                    <input type="text" placeholder="Pegue aquí el código HTML de inserción del mapa..." required>
+                </div>
+
+                <div class="caja-archivo animado-form" style="animation-delay: 0.7s; margin-top: 20px;">
+                    <label style="margin-top: 0; color: var(--navy); font-size: 14px;">📸 Subir Fotografías [Máximo 10]</label>
+                    <p style="font-size: 11px; color: var(--texto-gris); margin: 5px 0 10px 0; text-transform: none; letter-spacing: 0;">Se requiere alta resolución. Formatos: JPG, PNG o WEBP.</p>
+                    <input type="file" accept="image/*" multiple style="border: none; padding-top: 10px; cursor: pointer; width: 100%;" required>
+                </div>
+
+                <button type="submit" class="animado-form" style="animation-delay: 0.8s; letter-spacing: 2px; margin-top: 50px; font-size: 16px;">Publicar en Catálogo</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

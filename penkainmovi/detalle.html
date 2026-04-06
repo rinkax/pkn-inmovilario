@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Profile - PNK PREMIUM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .hero-gallery { width: 100%; height: 500px; object-fit: cover; border-radius: 8px; margin-bottom: 30px; box-shadow: var(--sombra-flotante); }
+        .grid-luxury-detalle { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; }
+        .especificacion-item { display: flex; align-items: center; gap: 15px; padding: 15px 0; border-bottom: 1px solid var(--borde-suave); font-size: 14px; }
+        .especificacion-item strong { color: var(--navy); }
+        .extra-tag { display: inline-block; background: #f1f2f6; color: var(--navy); padding: 8px 18px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 5px; transition: var(--transition); }
+        .extra-tag:hover { background: var(--gold); color: white; transform: translateY(-2px); }
+        @media (max-width: 900px) { .grid-luxury-detalle { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header class="animado">
+        <div class="logo"><a href="index.html">PNK <span>PREMIUM</span></a></div>
+        <nav><a href="index.html">← Regresar al Portfolio</a></nav>
+    </header>
+
+    <main class="animado delay-1">
+        <div class="caja-premium">
+            <div style="display: flex; justify-content: space-between; color: var(--texto-gris); font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">
+                <span>REF: C0125457</span>
+                <span>FECHA PÚB: 03-04-2026</span>
+            </div>
+            <h1 style="margin: 10px 0 5px 0; font-size: 38px;">Casa Sector El Milagro, La Serena</h1>
+            <h2 style="color: var(--gold); font-size: 32px; margin-top: 5px; font-weight: 700;">$154.000.000 <span style="font-size: 18px; color: var(--texto-gris); font-weight: 400;">(UF 4.500)</span></h2>
+
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80" alt="Immersive View" class="hero-gallery animado delay-2">
+            <p style="text-align: center; color: var(--texto-gris); font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">📸 Portfolio Photography [1 of 10]</p>
+
+            <div class="grid-luxury-detalle animado delay-2">
+                <div>
+                    <h3 style="text-transform: uppercase; letter-spacing: 2px; font-size: 16px;">Property Overview</h3>
+                    <p style="line-height: 1.8; color: var(--texto-gris); font-size: 15px; font-weight: 300;">Excelente propiedad ubicada en el cotizado sector del Milagro, ideal para la vida en familia. Cuenta con excelente iluminación natural, amplios espacios y conectividad inmejorable a colegios y supermercados.</p>
+                    
+                    <h3 style="text-transform: uppercase; letter-spacing: 2px; font-size: 16px; margin-top: 40px;">Specifications</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 30px; margin-bottom: 40px;">
+                        <div class="especificacion-item">🛏️ <strong>Dormitorios:</strong> 4</div>
+                        <div class="especificacion-item">🚿 <strong>Baños:</strong> 3</div>
+                        <div class="especificacion-item">📐 <strong>Área Construida:</strong> 120 m²</div>
+                        <div class="especificacion-item">🌳 <strong>Área Terreno:</strong> 250 m²</div>
+                    </div>
+
+                    <h3 style="text-transform: uppercase; letter-spacing: 2px; font-size: 16px;">Aménities & Extras</h3>
+                    <div style="margin-bottom: 40px;">
+                        <span class="extra-tag">✔️ Bodega</span>
+                        <span class="extra-tag">✔️ Estacionamiento</span>
+                        <span class="extra-tag">✔️ Cocina amoblada</span>
+                        <span class="extra-tag">✔️ Antejardín</span>
+                        <span class="extra-tag">✔️ Piscina</span>
+                        <span class="extra-tag">✔️ Logia</span>
+                        <span class="extra-tag">✔️ Patio trasero</span>
+                    </div>
+
+                    <h3 style="text-transform: uppercase; letter-spacing: 2px; font-size: 16px;">Exact Location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110756.24898126938!2d-71.3323091!3d-29.9045331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691ca6f63489823%3A0xc3ab530cc00d1e57!2sLa%20Serena%2C%20Coquimbo!5e0!3m2!1ses-419!2scl!4v1712242045952!5m2!1ses-419!2scl" width="100%" height="350" style="border:0; border-radius: 8px; filter: grayscale(30%); transition: var(--transition);" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(30%)'" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div>
+                    <div class="caja-premium" style="background: #fbfbfb; border: 1px solid var(--navy); position: sticky; top: 120px;">
+                        <h3 style="margin-top: 0; text-align: center; color: var(--navy); font-size: 18px; text-transform: uppercase; letter-spacing: 2px;">Interesado en la Propiedad</h3>
+                        <p style="text-align: center; font-size: 14px; color: var(--texto-gris); font-weight: 300;">Asigne un Gestor Premium para guiarlo en el proceso de adquisición.</p>
+                        
+                        <button class="btn" style="background: #27ae60; letter-spacing: 2px;">📅 Solicitar Visita Virtual</button>
+                        <button class="btn" style="background: var(--navy); margin-top: 15px; letter-spacing: 2px;">🔗 Compartir Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

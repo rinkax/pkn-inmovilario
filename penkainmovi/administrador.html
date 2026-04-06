@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTROL CONSOLE - PNK PREMIUM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        header { background-color: var(--navy); color: white; border-bottom: none;}
+        header .logo a { color: white; }
+        header .logo span { color: var(--gold); }
+        .admin-nav a { color: rgba(255,255,255,0.8); font-size: 12px; transition: var(--transition);}
+        .admin-nav a:hover { color: var(--gold); }
+        .console-icons { display: flex; justify-content: center; gap: 40px; margin: 60px 0; }
+        .widget-console { background: var(--blanco-puro); border-radius: 8px; padding: 30px; text-align: center; width: 250px; border: 1px solid var(--borde-suave); box-shadow: var(--sombra-flotante); transition: var(--transition); cursor: pointer; }
+        .widget-console:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15); }
+        .widget-console h1 { font-size: 50px; margin: 0; transition: var(--transition); }
+        .widget-console:hover h1 { transform: scale(1.1); }
+        .widget-console h3 { text-transform: uppercase; letter-spacing: 2px; font-size: 14px; color: var(--navy); margin: 15px 0 0 0; }
+        .crud-panel { display: none; animation: fadeInUp 0.5s ease forwards; }
+        .action-bar { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;}
+        .action-bar .btn { width: auto; margin-top: 0; padding: 12px 25px; font-size: 12px;}
+    </style>
+</head>
+<body>
+
+    <header class="animado">
+        <div class="logo"><a href="index.html">PNK <span>CONSOLA</span></a></div>
+        <nav class="admin-nav">
+            <span style="font-size: 14px; font-weight: 300; margin-right: 20px;">👤 System Admin</span>
+            <a href="index.html">⏏ Cerrar Sesión Segura</a>
+        </nav>
+    </header>
+
+    <main class="animado delay-1">
+        <h2 style="text-align: center; text-transform: uppercase; letter-spacing: 3px; font-weight: 300; color: var(--navy);">Centro de Operaciones</h2>
+
+        <section class="console-icons">
+            <div class="widget-console" onclick="mostrarCRUD('usuarios')">
+                <h1>👥</h1>
+                <h3>Gestión de Usuarios</h3>
+                <p style="font-size: 12px; color: var(--texto-gris); margin-top: 5px;">Dueños, Gestores, Admin</p>
+            </div>
+            <div class="widget-console" onclick="mostrarCRUD('propiedades')">
+                <h1>🏢</h1>
+                <h3>Gestión de Portfolio</h3>
+                <p style="font-size: 12px; color: var(--texto-gris); margin-top: 5px;">Inventario de Inmuebles</p>
+            </div>
+        </section>
+
+        <section id="crud-usuarios" class="caja-premium crud-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--borde-suave); padding-bottom: 15px;">
+                <h3 style="margin: 0; text-transform: uppercase; letter-spacing: 2px;">Mantenedor de Usuarios</h3>
+                <span style="font-size: 12px; color: var(--navy); font-weight: 600; background: #e8f4fd; padding: 5px 15px; border-radius: 20px;">🟢 350 Activos</span>
+            </div>
+            <div class="action-bar">
+                <a href="dueño.html" class="btn">+ Ingresar Dueño</a>
+                <a href="gestor.html" class="btn" style="background: var(--gold);">+ Ingresar Gestor</a>
+                <button class="btn" style="background: var(--rojo);">- Dar de Baja Registro</button>
+            </div>
+            <div style="margin-top: 30px; font-size: 14px; color: var(--texto-gris); text-align: center; border: 1px dashed var(--borde-suave); padding: 40px; border-radius: 8px;">
+                Módulo de Base de Datos en espera... Seleccione una acción.
+            </div>
+        </section>
+
+        <section id="crud-propiedades" class="caja-premium crud-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--borde-suave); padding-bottom: 15px;">
+                <h3 style="margin: 0; text-transform: uppercase; letter-spacing: 2px;">Mantenedor de Portfolio</h3>
+                <span style="font-size: 12px; color: var(--gold-dark); font-weight: 600; background: #fdfaf3; padding: 5px 15px; border-radius: 20px;">🟡 120 Inmuebles</span>
+            </div>
+            <div class="action-bar">
+                <a href="registro_propiedad.html" class="btn">+ Publicar Nuevo Inmueble</a>
+                <button class="btn" style="background: var(--gold);">Administrar Avisos Rápidos</button>
+            </div>
+             <div style="margin-top: 30px; font-size: 14px; color: var(--texto-gris); text-align: center; border: 1px dashed var(--borde-suave); padding: 40px; border-radius: 8px;">
+                Módulo de Inventario en espera... Seleccione una acción.
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function mostrarCRUD(tipo) {
+            document.querySelectorAll('.crud-panel').forEach(panel => panel.style.display = 'none');
+            document.getElementById('crud-' + tipo).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

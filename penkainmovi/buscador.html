@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador - PNK PREMIUM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .filter-bar { display: flex; gap: 20px; flex-wrap: wrap; }
+        .filter-bar > div { flex: 1; min-width: 200px; }
+    </style>
+</head>
+<body>
+
+    <header class="animado">
+        <div class="logo">
+            <a href="index.html">PNK <span>PREMIUM</span></a>
+        </div>
+        <nav>
+            <a href="index.html">Regresar al Portal</a>
+            <a href="dueño.html">Soy Propietario</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="caja-premium animado delay-1">
+            <h3 style="margin-top: 0; color: var(--navy); font-size: 18px; text-transform: uppercase; letter-spacing: 1px;">Búsqueda Avanzada de Portfolio</h3>
+            <form action="#" method="GET" class="filter-bar">
+                <div>
+                    <label>Provincia</label>
+                    <select><option>Elqui</option><option>Limarí</option><option>Choapa</option></select>
+                </div>
+                <div>
+                    <label>Comuna</label>
+                    <select><option>La Serena</option><option>Coquimbo</option><option>Ovalle</option></select>
+                </div>
+                <div>
+                    <label>Sector</label>
+                    <input type="text" placeholder="Ej: El Milagro">
+                </div>
+                <div>
+                    <button type="button" style="margin-top: 35px; height: 45px; border-radius: 8px;">Filtrar Resultados</button>
+                </div>
+            </form>
+        </section>
+
+        <h2 style="text-align: center; margin: 50px 0 30px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: var(--navy);" class="animado delay-2">Propiedades Encontradas (3)</h2>
+
+        <section class="grilla-luxury animado delay-2">
+            <article class="tarjeta-luxury">
+                <div class="img-contenedor">
+                    <div class="badge-precio">$154.000.000</div>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Casa en El Milagro">
+                </div>
+                <div class="tarjeta-info">
+                    <span class="codigo" style="color: var(--gold);">REF: C0125457</span>
+                    <h3>Casa Sector El Milagro, La Serena</h3>
+                    <div class="specs">
+                        <span>🛏️ 4 Dorm</span>
+                        <span>🚿 3 Baños</span>
+                        <span>📐 120m²</span>
+                    </div>
+                    <a href="detalle.html" class="btn" style="margin-top: 0; border-radius: 30px;">Ver Detalles</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-luxury">
+                <div class="img-contenedor">
+                    <div class="badge-precio">$115.000.000</div>
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Departamento">
+                </div>
+                <div class="tarjeta-info">
+                    <span class="codigo" style="color: var(--gold);">REF: D088412</span>
+                    <h3>Departamento Avenida del Mar</h3>
+                    <div class="specs">
+                        <span>🛏️ 3 Dorm</span>
+                        <span>🚿 2 Baños</span>
+                        <span>📐 95m²</span>
+                    </div>
+                    <a href="detalle.html" class="btn" style="margin-top: 0; border-radius: 30px;">Ver Detalles</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-luxury">
+                <div class="img-contenedor">
+                    <div class="badge-precio">$85.000.000</div>
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Terreno">
+                </div>
+                <div class="tarjeta-info">
+                    <span class="codigo" style="color: var(--gold);">REF: T099111</span>
+                    <h3>Terreno Valle del Elqui</h3>
+                    <div class="specs">
+                        <span>📐 5000m² Terreno</span>
+                        <span>🌳 Vista Panorámica</span>
+                    </div>
+                    <a href="detalle.html" class="btn" style="margin-top: 0; border-radius: 30px;">Ver Detalles</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

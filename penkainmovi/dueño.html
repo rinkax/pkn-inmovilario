@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Propietarios - PNK PREMIUM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body { margin: 0; }
+        .split-layout { display: flex; min-height: 100vh; }
+        
+        /* Mitad Izquierda: Imagen Fija */
+        .split-image {
+            flex: 1;
+            background: linear-gradient(rgba(19,39,67,0.5), rgba(19,39,67,0.8)), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80') center/cover;
+            display: flex; flex-direction: column; justify-content: center; padding: 60px; color: white;
+            position: sticky; top: 0; height: 100vh; box-sizing: border-box;
+        }
+        .split-image h1 { font-size: 40px; color: white; margin-bottom: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .btn-volver { position: absolute; top: 30px; left: 40px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; opacity: 0.8;}
+        .btn-volver:hover { opacity: 1; color: var(--gold); }
+        
+        /* Mitad Derecha: Formulario Deslizable */
+        .split-form {
+            flex: 1.2; background: var(--fondo-sitio); padding: 60px 8%; display: flex; flex-direction: column; justify-content: center;
+        }
+        
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+
+        @keyframes slideInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animado-form { animation: slideInUp 0.8s ease forwards; opacity: 0; }
+        
+        @media (max-width: 900px) {
+            .split-layout { flex-direction: column; }
+            .split-image { height: 35vh; position: relative; padding: 30px; }
+            .split-form { padding: 40px 20px; flex: 1; }
+            .form-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split-layout">
+        <div class="split-image animado">
+            <a href="index.html" class="btn-volver">← Volver al Portal</a>
+            <span style="color: var(--gold); font-weight: 700; letter-spacing: 3px; font-size: 14px;">RED DE PROPIETARIOS</span>
+            <h1>Maximice el valor de sus inmuebles</h1>
+            <p style="font-weight: 300; opacity: 0.9;">Acceda a nuestra plataforma exclusiva para gestionar sus propiedades, conectando con clientes exigentes y gestores de alto nivel en toda la región.</p>
+        </div>
+
+        <div class="split-form">
+            <h2 class="animado-form" style="color: var(--navy); font-size: 28px; margin-top: 0; margin-bottom: 5px;">Alta de Propietario</h2>
+            <p class="animado-form" style="color: var(--texto-gris); font-size: 14px; margin-bottom: 40px;">Complete sus credenciales para habilitar su cuenta en el sistema.</p>
+
+            <form action="index.html" method="POST">
+                
+                <div class="form-grid animado-form" style="animation-delay: 0.1s;">
+                    <div><label>RUT Identificador</label><input type="text" placeholder="Ej: 12345678-9" required></div>
+                    <div><label>Nombre Completo</label><input type="text" placeholder="Nombres y Apellidos" required></div>
+                </div>
+
+                <div class="form-grid animado-form" style="animation-delay: 0.2s;">
+                    <div><label>Fecha de Nacimiento</label><input type="date" required></div>
+                    <div>
+                        <label>Sexo</label>
+                        <select required>
+                            <option value="">Seleccione...</option>
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="animado-form" style="animation-delay: 0.3s;">
+                    <label>Correo Electrónico Corporativo / Personal</label>
+                    <input type="email" placeholder="contacto@empresa.com" required>
+                </div>
+
+                <div class="form-grid animado-form" style="animation-delay: 0.4s;">
+                    <div><label>Contraseña de Acceso</label><input type="password" placeholder="••••••••" required></div>
+                    <div><label>Teléfono Móvil</label><input type="tel" placeholder="+56 9" required></div>
+                </div>
+
+                <div class="animado-form" style="animation-delay: 0.5s;">
+                    <label>N° de la Propiedad (Rol de Avalúo Bienes Raíces)</label>
+                    <input type="text" placeholder="Ingrese el rol principal de su propiedad" required>
+                </div>
+
+                <button type="submit" class="animado-form" style="animation-delay: 0.6s; letter-spacing: 2px; margin-top: 50px; font-size: 16px;">Solicitar Activación de Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

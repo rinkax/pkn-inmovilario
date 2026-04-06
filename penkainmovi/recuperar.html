@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar Acceso - PNK PREMIUM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Estilos exclusivos para la pantalla de recuperación */
+        body {
+            background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80') center/cover fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        /* Capa de oscurecimiento */
+        body::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(19, 39, 67, 0.85); z-index: 1;
+        }
+        /* Tarjeta de Cristal */
+        .login-glass {
+            position: relative; z-index: 2; width: 100%; max-width: 450px;
+            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 50px;
+            color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .login-glass label { color: rgba(255,255,255,0.9); }
+        .login-glass input { border-bottom-color: rgba(255,255,255,0.4); color: white; }
+        .login-glass input:focus { border-bottom-color: var(--gold); }
+        .login-glass input::placeholder { color: rgba(255,255,255,0.5); }
+    </style>
+</head>
+<body>
+
+    <div class="login-glass animado">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a href="index.html" style="text-decoration: none; font-size: 26px; font-weight: 700; color: white; letter-spacing: -1px;">PNK <span style="color: var(--gold);">PREMIUM</span></a>
+        </div>
+        
+        <h2 style="text-align: center; margin-top: 0; font-size: 20px; letter-spacing: 2px; color: white;">RECUPERACIÓN DE CUENTA</h2>
+        <p style="text-align: center; font-size: 13px; font-weight: 300; margin-bottom: 35px; color: rgba(255,255,255,0.8); line-height: 1.6;">Ingrese su correo electrónico corporativo o personal para recibir las instrucciones de restablecimiento de contraseña.</p>
+        
+        <form action="index.html" method="GET">
+            <label>Correo Electrónico</label>
+            <input type="email" placeholder="usuario@pnk.cl" required>
+            
+            <button type="submit" style="background: var(--gold); color: var(--navy); margin-top: 40px; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);">Enviar Enlace de Acceso</button>
+        </form>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" style="color: white; font-size: 12px; text-decoration: none; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;">← Volver al Portal de Inicio</a>
+        </div>
+    </div>
+
+</body>
+</html>
